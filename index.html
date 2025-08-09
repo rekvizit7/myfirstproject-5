@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Terraria — Огляд гри</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #1e1e2f;
+      color: #ffffff;
+    }
+
+    header {
+      background: #2c2f4a;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+      color: #00ffcc;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .content {
+      padding: 30px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    .gallery img {
+      width: 100%;
+      max-width: 250px;
+      border: 2px solid #00ffcc;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    .button-container {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    button {
+      padding: 12px 25px;
+      background-color: #00ffcc;
+      color: #000;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #00cca0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #2c2f4a;
+      margin-top: 40px;
+    }
+
+    .animated-text {
+      color: #00ffcc;
+      animation: glow 2s infinite alternate;
+    }
+
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 10px #00ffcc;
+      }
+      to {
+        text-shadow: 0 0 20px #00ffcc, 0 0 30px #00ffcc;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 class="animated-text">Terraria — Піксельна Пригода</h1>
+    <nav>
+      <a href="#about">Про гру</a>
+      <a href="#gallery">Галерея</a>
+      <a href="#download">Завантажити</a>
+    </nav>
+  </header>
+
+  <div class="content" id="about">
+    <h2>Про Terraria</h2>
+    <p>
+      <strong>Terraria</strong> — це піксельна гра у жанрі sandbox, в якій ви досліджуєте, будуєте, боретесь з монстрами та виживаєте в відкритому світі. Вас чекають пригоди під землею, будівництво величезних замків, пошук скарбів та битви з босами!
+    </p>
+  </div>
+
+  <div class="content" id="gallery">
+    <h2>Галерея</h2>
+    <div class="gallery">
+      <img src="https://amiel.club/uploads/posts/2022-03/1647690016_1-amiel-club-p-kartinki-terrarii-1.jpg" alt="Скріншот Terraria 1">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSG60Sz_rMyUHhJUGZUWcJz789Q6XdxrJacUw&s" alt="Скріншот Terraria 2">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUc8jCslwSTPa4UKO3KgWTRERsXkot1XcInQ&s" alt="Скріншот Terraria 3">
+    </div>
+  </div>
+
+  <div class="content button-container" id="download">
+    <h2>Спробуй Terraria вже сьогодні!</h2>
+    <button onclick="showMessage()">Завантажити</button>
+    <p id="message" style="margin-top: 15px;"></p>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Terraria Fan Site. Усі права на зображення належать їхнім власникам.</p>
+  </footer>
+
+  <script>
+    function showMessage() {
+      const msg = document.getElementById("message");
+      msg.textContent = "Посилання на завантаження наразі недоступне. Слідкуйте за оновленнями!";
+      msg.style.color = "#ffaaaa";
+    }
+  </script>
+</body>
+</html>
